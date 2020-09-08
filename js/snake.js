@@ -12,6 +12,15 @@ class Snake {
         this.growTurns = 0;
     }
 
+    eatApple() {
+        if (this.head().equals(this.board.apple.position)) {
+            this.growTurns += 3;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     isOccupying(array) {
         let result = false;
         this.segments.forEach( segment => {
@@ -48,8 +57,12 @@ class Snake {
 
         this.turning = false;
 
+        if (this.eatApple()) {
+            this.board.apple.replace();
+        }
+
         if (this.growTurns > 0) {
-            this.growTurns -= 1;
+            this.growTurns -= 3;
         } else {
             this.segments.shift();
         }

@@ -23,6 +23,7 @@ class View {
 
     render() {
         this.updateClasses(this.board.snake.segments, "snake");
+        this.updateClasses([this.board.apple.position], "apple");
     }
 
     updateClasses(coords, className) {

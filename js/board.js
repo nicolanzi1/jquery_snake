@@ -1,10 +1,12 @@
 const Snake = require('./snake');
+const Apple = require('./apple');
 
 class Board {
     constructor(dim) {
         this.dim = dim;
 
         this.snake = new Snake(this);
+        this.apple = new Apple(this);
     }
 
     static blankGrid(dim) {
@@ -27,6 +29,8 @@ class Board {
         this.snake.segments.forEach( segment => {
             grid[segment.i][segment.j] = Snake.SYMBOL;
         });
+
+        grid[this.apple.position.i][this.apple.position.j] = Apple.SYMBOL;
 
         const rowStrs = [];
         grid.map( row => row.join("") ).join("\n");
