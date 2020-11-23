@@ -1,0 +1,22 @@
+{
+  "name": "nicola_lanzillotta_jquery_snake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolanzi1/jquery_snake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://nicolanzi1.github.io/jquery_snake",
+  "bugs": {
+    "url": "https://github.com/nicolanzi1/jquery_snake/issues"
+  },
+  "homepage": "https://github.com/nicolanzi1/jquery_snake#readme"
+}
